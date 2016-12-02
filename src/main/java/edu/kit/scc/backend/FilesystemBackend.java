@@ -58,13 +58,16 @@ public class FilesystemBackend implements StorageBackend {
     capabilities.put("cdmi_capabilities_exact_inherit", "true");
     capabilities.put("cdmi_data_redundancy", "true");
     capabilities.put("cdmi_geographic_placement", "true");
-    capabilities.put("cdmi_latency", true);
+    capabilities.put("cdmi_latency", "true");
     capabilities.put("cdmi_capabilities_allowed", "true");
 
     metadata.put("cdmi_data_redundancy", 4);
     metadata.put("cdmi_geographic_placement", new String[] {"DE", "FR"});
     metadata.put("cdmi_latency", 100);
-    metadata.put("cdmi_capabilities_allowed", new String[] {"/cdmi_capabilities/container/profile1", "/cdmi_capabilities/container/profile2"});
+    metadata.put("cdmi_capabilities_allowed", 
+        new String[] {
+          "/cdmi_capabilities/container/profile1",
+          "/cdmi_capabilities/container/profile2"});
 
     monitoredAttributes.put("cdmi_data_redundancy_provided", 4);
     monitoredAttributes.put("cdmi_geographic_placement_provided", new String[] {"DE", "FR"});
