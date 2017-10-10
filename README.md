@@ -86,3 +86,6 @@ Read container capabilities
 ```
 curl -u restadmin:restadmin http://localhost:8080/cdmi_capabilities/container
 ```
+
+#Documentation
+https://indigo-dc.gitbooks.io/cdmi-qos/content/
