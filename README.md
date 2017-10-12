@@ -86,3 +86,13 @@ Read container capabilities
 ```
 curl -u restadmin:restadmin http://localhost:8080/cdmi_capabilities/container
 ```
+
+# Documentation
+https://indigo-dc.gitbooks.io/cdmi-qos/content/
+
+# Packages:
+## Debian / Ubuntu:
+http://repo.indigo-datacloud.eu/repository/indigo/2/ubuntu/dists/xenial-updates/
+
+## Redhat
+http://repo.indigo-datacloud.eu/repository/indigo/2/centos7/x86_64/updates/repoview
