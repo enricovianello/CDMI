@@ -17,7 +17,7 @@ pipeline {
                 container('maven-runner'){
                     git(url: 'https://github.com/enricovianello/CDMI.git', branch: "${params.BRANCH_NAME}")
                     sh 'mvn clean package'
-                    sh 'cp target/cdmi-server-1.2.jar ./rpm/SOURCES'
+                    sh 'cp target/cdmi-server-1.2.1.jar ./rpm/SOURCES'
                     sh 'cp config/application.yml ./rpm/SOURCES'
                     dir("rpm") {
                         stash name: "cdmi-rpm-dir", includes: "**"
