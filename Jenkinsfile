@@ -31,6 +31,7 @@ pipeline {
                 container('generic-runner'){
                     unstash name: 'cdmi-rpm-dir'
                     sh 'rpmbuild --define "_topdir $(pwd)" -ba $(pwd)/SPECS/cdmi-server.spec'
+                    sh 'cp $(pwd)/RPMS/x86_64/*.rpm .'
                     archiveArtifacts '*.rpm'
                 }
             }
