@@ -1,8 +1,12 @@
+@Library('sd')_
+
+def kubeLabel = getKubeLabel()
+
 pipeline {
 
     agent {
         kubernetes {
-            label "cdmi-server-${env.JOB_BASE_NAME}-${env.BUILD_NUMBER}"
+            label "${kubeLabel}"
             cloud 'Kube mwdevel'
             defaultContainer 'jnlp'
             inheritFrom 'ci-template'
